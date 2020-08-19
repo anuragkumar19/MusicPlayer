@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Web music player - Just choose file and play | .netlify.app</title>
+  <!-- Font Awesome CSS CDN -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+  <!-- My CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="left">
+      <i class="fa fa-music"></i>
+      &nbsp;Web music player
+    </div>
+    <div class="right">
+      <a href="#">Home</a>
+      <a href="about.html">About</a>
+    </div>
+  </nav>
+  <!-- /Navbar -->
+
+  <!-- Audio Element @hidden -->
+  <audio id="AudioElm" src="" class="hidden" autoplay loop></audio>
+  <!-- /Audio Element -->
+
+  <!-- Main Container -->
+  <div class="container">
+    <!-- Showcase -->
+    <section class="showcase">
+      <div id="disc" class="disc">
+        <i class="fas fa-compact-disc fa-10x"></i>
+      </div>
+      <div class="title">
+        <h1 id="Tracktitle" class="disabled">No track selected.</h1>
+      </div>
+    </section>
+    <!-- /Showcase -->
+
+    <!-- Input Section -->
+    <section>
+      <div class="input-group">
+        <label id="fileLabel" for="file"><i class="fa fa-microphone"></i> &nbsp;Choose a file.</label>
+        <input accept="audio/*" type="file" name="file" id="file">
+      </div>
+    </section>
+    <!-- /Input Section -->
+  </div>
+  <!-- /Main Container -->
+
+  <!-- Player Controller -->
+  <section id="player-cont">
+    <div class="player">
+      <div class="rangeOff">
+        <input type="range" name="rangeInp" class="e-range" min="1" max="100" value="0" id="rangeInpJ">
+      </div>
+      <div class="controls">
+        <i id="backBtn" class="fa fa-step-backward"></i>
+        <i id="playPauseBtn" class="fa fa-play"></i>
+        <!--<i class="fas fa-pause"></i>-->
+        <i id="forBtn" class="fa fa-step-forward"></i>
+        <hr class="ver">
+        <i id="stopBtn" class="fa fa-stop"></i>
+        <i id="muteBtn" class="fas fa-volume-up"></i>
+      </div>
+    </div>
+  </section>
+  <!-- /Player Controller -->
+  <!-- Moment.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js" integrity="sha512-rmZcZsyhe0/MAjquhTgiUcb4d9knaFc7b5xAfju483gbEXTkeJRUMIPk6s3ySZMYUHEcjKbjLjyddGWMrNEvZg==" crossorigin="anonymous"></script>
+  <!-- My JavaScript -->
+  <script src="main.js"></script>
+</body>
+</html>
